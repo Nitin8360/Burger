@@ -1,0 +1,122 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Full page background image */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Use min-height for better content scaling */
+  background: url('high-angle-bacon-burger-with-salad-copy-space.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* About Us Page Styles */
+.about-container {
+  max-width: 600px; /* Reduced the max-width to make the container smaller */
+  width: 80%; /* Use percentage to scale the container with the screen */
+  padding: 15px; /* Adjusted padding for a smaller look */
+  margin: 20px auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 15px; /* Reduced border radius */
+  box-shadow: 0px 0px 10px rgb(0, 94, 115);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+body::before {
+content: '';
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.6);
+z-index: 0;
+}
+
+.about-container h1 {
+  font-size: 2.5rem; /* Reduced font size */
+  color: #d9534f;
+  margin-bottom: 15px; /* Adjusted margin */
+}
+
+.about-container p {
+  font-size: 1rem; /* Reduced font size */
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.about-container h2 {
+  font-size: 1.8rem; /* Reduced font size */
+  color: #fffb00;
+  margin-top: 25px;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+button {
+  padding: 12px 25px; /* Adjusted padding */
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(99, 0, 0, 0.8); 
+  color: white;
+  font-size: 16px; /* Adjusted font size */
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  animation: bounce 0.6s ease;
+  color: #fffb00;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .about-container {
+      max-width: 90%; /* Make container even smaller on mobile */
+      padding: 10px;
+  }
+  
+  .about-container h1 {
+      font-size: 2rem;
+  }
+
+  .about-container p {
+      font-size: 0.9rem;
+  }
+
+  .about-container h2 {
+      font-size: 1.4rem;
+  }
+
+  button {
+      padding: 10px 15px; /* Smaller button padding */
+      font-size: 14px;
+  }
+}

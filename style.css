@@ -1,0 +1,228 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  position: relative; /* Allow positioning for pseudo-element */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  color: #fff;
+}
+
+/* Dark Overlay for the entire body */
+body::before {
+  content: '';
+  position: fixed; /* Fixed positioning to cover the entire viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Same overlay effect as before */
+  z-index: 1; /* Place behind all other content */
+}
+
+/* Background image styling */
+body {
+  background-image: url('high-angle-bacon-burger-with-salad-copy-space.jpg');
+  background-size: cover;
+  background-position: center;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Container to align content */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+  padding: 10px 0;
+  position: relative; /* Changed to relative so it scrolls with the page */
+  width: 100%;
+  z-index: 1000; /* Ensures it stays on top of other sections */
+  border: none; /* Ensure no border around the header */
+  background: rgba(0, 0, 0, 0.8); /* Add background for better visibility */
+}
+
+/* Adding space to individual sections */
+section {
+  padding: 20px 0; /* Add padding for top and bottom */
+  margin-top: 20px; /* Add margin to separate from other content */
+}
+
+/* Logo styling */
+.logo img {
+  width: 150px;
+}
+
+/* Navigation menu styling */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0; /* Remove any padding that might cause issues */
+  margin: 0; /* Remove any margin */
+}
+
+.nav-menu a {
+  padding: 10px 10px;
+  /* background-color: rgb(0, 0, 0,0.1); */
+  /* border-radius: 50px; */
+  /* border: 5px solid rgb(0, 63, 82); */
+  
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  text-shadow:  0px 0px 10px rgb(242, 255, 0);;
+  transition: color 0.9s ease;
+
+  outline: none; /* Removes any outlines */
+}
+
+.nav-menu :hover {
+  animation: bounce  0.7s ease;
+  color: #fff700;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+   50% {
+    transform: translateY(-10px); /* Adjust bounce height */
+  }
+}
+
+/* Call to Action button styling */
+.cta-btn {
+  padding: 10px 20px;
+  background-color: #f9b208;
+  color: #000000;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+/* CTA Button hover effect */
+.cta-btn:hover {
+  background-color: #373737d6;
+}
+
+/* Hero Section Styling */
+.hero {
+  height: 150vh;
+  position: relative; /* Allow positioning for hero content */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1; /* Ensure hero content stays above the overlay */
+}
+
+/* Hero content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #f9b208;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+/* Secondary Button */
+.secondary-btn {
+  padding: 15px 30px;
+  background-color: transparent;
+  color: #f9b208;
+  border: 2px solid #f9b208;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background-color: #f9b208;
+  color: #1e1e1e;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .cta-btn,
+  .secondary-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Modal Styling */
+
+
+
+
+/* Order Online Section Styling */
+/* Order Section Styling */
+#order-section {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background with 80% opacity */
+  padding: 25px 0; /* Add padding for better spacing */
+  text-align: center; /* Center the text */
+  /* border-radius: 10px; Rounded corners for aesthetics */
+  margin-top: 100px; /* Add margin to separate from other sections */
+  color: #ffffff;
+  box-shadow:  0px 0px 10px rgb(0, 67, 80);;
+  transform: 80px; /* Ensure text is visible against the dark background */
+  
+}
+
+/* Adjustments for headers and paragraphs in the Order Section */
+#order-section h2,
+#order-section p {
+  color: #f9b208; /* Use a contrasting color for better readability */
+}
+
+/* Modal Content Styling */
+
+/* Optional: Transparency for other text elements in the modal */
+.modal-content h2,
+.modal-content p {
+  color: #ffffff; /* Ensure text is readable */
+}
+

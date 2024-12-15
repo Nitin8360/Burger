@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger Menu</title>
+  <link rel="stylesheet" href="menu1.css">
+</head>
+<body id="menu-page">
+  <h1>Burger Menu</h1>
+    <nav>
+        <ul class="nav-menu">
+          <li><a href="#order-section" class="cta-btn">Order Now</a></li> <!-- Links to the order section -->
+        </ul>
+      </nav>
+  <header>
+   
+    <nav>
+      <button class="back-btn" onclick="location.href='index.html'">Back to Home</button>
+    </nav>
+  </header>
+
+  <div class="menu-container">
+    <div class="menu-item">
+      <h2>Classic Paneer Burger</h2>
+      <p>Juicy beef patty with lettuce, tomato, and cheese.</p>
+    </div>
+    <div class="menu-item">
+      <h2>Cheese Lover's Burger</h2>
+      <p>Loaded with three types of cheese and grilled onions.</p>
+    </div>
+    <div class="menu-item">
+      <h2>Spicy Chicken Burger</h2>
+      <p>Spicy fried chicken breast with jalapeños and ranch sauce.</p>
+    </div>
+    <div class="menu-item">
+      <h2>Veggie Delight Burger</h2>
+      <p>Grilled veggie patty with avocado and fresh greens.</p>
+    </div>
+  </div>
+ 
+
+  <!-- Modal Structure -->
+  <div id="order-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="close-modal">&times;</span>
+      <h2 id="biss">Order Online</h2>
+      <p id="pill">Order your favorite burgers and have them delivered!</p>
+      <form id="orderForm">
+        <label for="burgerType" id="lavel">Select Burger Type:</label>
+        <select id="burgerType" required>
+          <option value="Cheeseburger"> -Tomato Burger $5</option>
+          <option value="Veggie Burger">Cheese Lover's Burger - $4</option>
+          <option value="Bacon Burger">Spicy Chicken Burger
+            - $6</option>
+          <option value="Chicken Burger">Veggie Delight Burger - $5.5</option>
+        </select>
+
+        <label for="location" id="lavel1">Delivery Location:</label>
+        <input type="text" id="location" placeholder="Enter your address" required>
+
+        <button type="submit" class="confirm1">Confirm Order</button>
+      </form>
+    </div>
+  </div>
+  <script src="menu.js"></script>
+  <script src="nit.js"></script>
+</body>
+</html>

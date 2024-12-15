@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#boy {
+  height: 100vh;
+  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background: url('high-angle-bacon-burger-with-salad-copy-space.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.login-container {
+  width: 300px;
+  padding: 40px;
+  background-color: rgba(41, 20, 20, 0.2);
+  box-shadow: 1px 2px 15px rgb(0, 64, 86);
+  border-radius: 10px;
+  border: 1px solid rgb(0, 72, 90);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+button.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 150, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button.login-btn:hover {
+  background-color: rgba(0, 150, 255, 1);
+}
+
+#error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.logo img {
+  width: 150px;
+}
+
+
+#ddd{
+  padding: 5px 11px;
+  background-color: #000000;
+  border-radius: 30px;
+}
+.back-btn {
+  padding: 12px 25px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  box-shadow:  0px 0px 10px rgb(81, 0, 12);;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  animation: bounce  0.6s ease;
+  color: yellow;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+   50% {
+    transform: translateY(-10px); /* Adjust bounce height */
+  }
+}
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+body::before {
+  content: '';
+  position: fixed; /* Fixed positioning to cover the entire viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Same overlay effect as before */
+  z-index: 0; Place behind all other content
+}
